@@ -64,26 +64,75 @@
     </nav>
 
     <main class="container">
-      <div class="slider"></div>
-
-      <h1>Welcome to Our E-Commerce Store</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nisi id
-        massa congue commodo.
-      </p>
-      <p>
-        Nullam eleifend in lectus et tristique. Fusce at nunc nec urna viverra
-        dapibus.
-      </p>
+      <div id="slider"></div>
+      <section class="top-deals">
+        <h1>Today's Deals</h1>
+        <div class="top-deals__items"></div>
+      </section>
+      <section class="categories">
+        <h1 class="categories__title">CATEGORIES</h1>
+        <div class="categories__items">
+          <div class="categories__item">
+            <div>
+              <img src="./images/electronics_category.jpg" alt="electronic" />
+            </div>
+            <h3>Electronic</h3>
+          </div>
+          <div class="categories__item">
+            <div>
+              <img src="./images/jewelry_caterogy.jpg" alt="jewelry" />
+            </div>
+            <h3>Jewelry</h3>
+          </div>
+          <div class="categories__item">
+            <div>
+              <img src="./images/mans_category.avif" alt="electronics" />
+            </div>
+            <h3>Men's</h3>
+          </div>
+          <div class="categories__item">
+            <div>
+              <img src="./images/womens_category.jpg" alt="women's" />
+            </div>
+            <h3>Women's</h3>
+          </div>
+        </div>
+      </section>
+      <section class="best-seller">
+        <h1>Best Seller Products</h1>
+        <div class="slider-container">
+          <div class="slider">
+            <div class="slider-items"></div>
+          </div>
+          <button class="prev-btn" onclick="slide(-1)">Previous</button>
+          <button class="next-btn" onclick="slide(1)">Next</button>
+        </div>
+      </section>
     </main>
     <footer class="main-footer">
       <nav>
         <ul class="main-footer__links">
           <li class="main-footer__link">
-            <a href="#">Support</a>
+            <a href="https://s-a-i-f-a-l-i.github.io/" target="_blank"
+              >Page Code</a
+            >
           </li>
           <li class="main-footer__link">
-            <a href="#">Terms of Use</a>
+            <a href="https://s-a-i-f-a-l-i.github.io/" target="_blank"
+              >My Portfolio</a
+            >
+          </li>
+          <li class="main-footer__link">
+            <a
+              href="https://drive.google.com/file/d/1TY4QHsdz4FrapEZ96M5TSRhOuuXk6Sw8/view?usp=sharing"
+              target="_blank"
+              >My Resume</a
+            >
+          </li>
+          <li class="main-footer__link">
+            <a href="https://github.com/S-a-i-f-A-l-i" target="_blank"
+              >hire me!</a
+            >
           </li>
         </ul>
       </nav>

@@ -279,8 +279,231 @@ main {
 /* Main Styles */
 
 .container {
-  max-width: 800px;
+  width: 90%;
   margin: 0 auto;
-  margin-top: 2rem;
+  margin-top: 4.3rem;
+}
+
+#slider{
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 20px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+#slider button{
+  border: none;
+  font-size: 1.5rem;
+  background-color: white;
+  cursor: pointer;
+}
+.imageContainer{
+  width: 450px;
+  height: 450px;
+}
+#slider img{
+  width: 100%;
+  height: 450px;
+  transition: 1s;
+}
+@media (max-width: 40rem) {
+  .imageContainer{
+    width: 350px;
+    height: 350px;
+  }
+  #slider img{
+    height: 350px;
+  }
+}
+@media screen and (min-width: 40rem) and (max-width: 49rem) {
+  .imageContainer{
+    width: 400px;
+    height: 400px;
+  }
+  #slider img{
+    height: 400px;
+  }
+}
+
+.categories{
+  text-align: center;
+  margin: auto;
+  margin-top: 2.5rem;
+}
+
+.categories__items{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.categories__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.categories__item > div{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.categories__items img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  /* border-radius: 50%; */
+  transition: 5s;
+}
+.categories__items img:hover{
+  transform: scale(1.5);
+}
+@media (max-width: 40rem) {
+  .categories__items{
+    grid-template-columns: repeat(1,1fr);
+  }
+}
+@media screen and (min-width: 40rem) and (max-width: 54rem) {
+  .categories__items{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+.top-deals{
+  text-align: center;
+  margin-top: 2.5rem;
+}
+.top-deals__items{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 20px;
+}
+
+.top-deals__items__item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.top-deals__items__item:hover{
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
+.top-deals__items__item > div {
+  height: 250px;
+  display: flex;
+  overflow: hidden;
+}
+.top-deals__items__item h2{
+  margin: -8px 0;
+}
+.top-deals__items__item p span{
+  text-decoration: line-through;
+}
+
+.top-deals__items__item img{
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  transition: 3s;
+}
+.top-deals__items__item img:hover{
+  transform: scale(0.5);
+}
+
+.top-deals__items__item--discount{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  font-size: 0.8rem;
+  color: white;
+  background: #ff5454;
+  padding: 0.5rem;
+  transform: rotate(45deg) translate(3.5rem, -1rem);
+  transform-origin: center;
+  width: 10rem;
+  text-align: center;
+}
+@media (max-width: 40rem) {
+  .top-deals__items{
+    grid-template-columns: repeat(2,1fr);
+  }
+  
+}
+@media screen and (min-width: 40rem) and (max-width: 54rem) {
+  .top-deals__items{
+    grid-template-columns: repeat(3,1fr);
+  } 
+}
+    
+
+/* Slider */
+.best-seller{
+  width: 90vw;
+  margin: auto;
+}
+
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.slider-items {
+  display: flex;
+}
+
+.slider-item {
+  width: 200px;
+  height: 300px;
+  margin: 10px;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.slider-item div{
+  height: 250px;
+  display: flex;
+}
+.slider-item img{
+  width: 100%;
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
 }
